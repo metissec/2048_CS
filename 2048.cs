@@ -39,6 +39,7 @@ namespace _2048
             gameBoard = new int[4, 4];
             Enumerable.Repeat(0, 16).ToArray();
             Spawn();
+            Spawn();
             Draw();
         }
 
@@ -171,17 +172,63 @@ namespace _2048
         private void Draw()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Score: " + score + "\n");
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
                 {
+                    Color(i, j);
                     Console.Write(string.Format("{0,4} ", gameBoard[i, j]));
                 }
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n" + "Use Arrow keys to Move");
         }
-
+        private void Color(int i, int j)
+        {
+            int val = gameBoard[i, j];
+            switch (val)
+            {
+                case 0:
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    break;
+                case 2:
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case 4:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case 8:
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+                case 16:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case 32:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case 64:
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    break;
+                case 128:
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    break;
+                case 256:
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    break;
+                case 512:
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    break;
+                case 1024:
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    break;
+                case 2048:
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+        }
     }
 
 

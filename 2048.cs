@@ -42,7 +42,7 @@ namespace _2048
             Draw();
         }
 
-        public void Spawn()
+        private void Spawn()
         {
             List<int[]> t = new List<int[]>();
             for (int i = 0; i < 4; i++)
@@ -176,7 +176,7 @@ namespace _2048
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    Console.Write(string.Format("{0} ", gameBoard[i, j]));
+                    Console.Write(string.Format("{0,4} ", gameBoard[i, j]));
                 }
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }

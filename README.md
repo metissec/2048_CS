@@ -23,3 +23,9 @@ Next instead of repeating the class name *Board*, I will instead be substituting
 * m to end in moveTile and RemoveTile Method (AngularBeginner, 27)
 * s to start in moveTile and RemoveTile Method (AngularBeginner, 27)
 * Added two constants FEILD_MAX and FEILD_MIN (AngularBeginner, 25)
+
+
+###Random Edits
+
+* Removed *Enumerable.Repeat(0, 16).ToArray();* (AngularBeginner, 13)
+* Replaced *if-else* with Ternary Operator (AngularBeginner, 19)

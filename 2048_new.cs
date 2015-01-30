@@ -40,6 +40,7 @@ namespace Game2048
             score = 0;
             random = new Random();
             gameBoard = new int[FEILD_MAX + 1, FEILD_MAX + 1];
+            //Spawn is called twice to add two starting tiles
             Spawn();
             Spawn();
             Draw();
@@ -189,48 +190,28 @@ namespace Game2048
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\n" + "Use Arrow keys to Move");
         }
+        enum Colors
+        {
+            DarkGray = 0,
+            Blue = 2,
+            Red = 4,
+            Magenta = 8,
+            Yellow = 16,
+            Green = 32,
+            Cyan = 64,
+            Grey = 128,
+            DarkBlue = 256,
+            DarkRed = 512,
+            DarkMagenta = 1024,
+            White = 2048
+        }
         private void Color(int i, int j)
         {
             int val = gameBoard[i, j];
-            switch (val)
-            {
-                case 0:
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
-                    break;
-                case 2:
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    break;
-                case 4:
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    break;
-                case 8:
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    break;
-                case 16:
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    break;
-                case 32:
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    break;
-                case 64:
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    break;
-                case 128:
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                    break;
-                case 256:
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
-                    break;
-                case 512:
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    break;
-                case 1024:
-                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                    break;
-                case 2048:
-                    Console.ForegroundColor = ConsoleColor.White;
-                    break;
-            }
+            string mycolorvalue = ((Colors)val).ToString();
+            ConsoleColor myCC;
+            if (Enum.TryParse(mycolorvalue, out myCC))
+                Console.ForegroundColor = myCC;
         }
     }
 

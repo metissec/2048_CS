@@ -26,7 +26,7 @@ Next instead of repeating the class name *Board*, I will instead be substituting
 
 ###Enum
 
-This is a recommended by /u/AngularBeginner but is more fully flushed out by /u/firemarshalbill. Who recommended I use a enum instead of a switch for the color choice. The code he suggested is below.
+This was recommended by /u/AngularBeginner but is more fully flushed out by /u/firemarshalbill. Who recommended I use a enum instead of a switch for the color choice. The code he suggested is below.
 ```
       enum Colors
       {

@@ -53,7 +53,7 @@ This was recommended by /u/AngularBeginner but is more fully flushed out by /u/f
       }
 ```
 
-The enum is used to the int value of the tile to the console color. It is fairly straight forward beside the TryParse(). This function trys converts/parse a string to that of ConsoleColor. /u/sacroiliac mentions what happens if a number is called and is not in the enum, well I don't know what happens. I have been experimenting with changing different values and it seems to pick a color at random. I am going to debug it fully to understand what exactly is happening. 
+The enum is used to map the int value of the tile to the console color. It is fairly straight forward beside the TryParse(). This function trys converts/parse a string to that of ConsoleColor. /u/sacroiliac mentions what happens if a number is called and is not in the enum, well I don't know what happens. I have been experimenting with changing different values and it seems to pick a color at random. I am going to debug it fully to understand what exactly is happening. 
 
 
 ###Random Edits

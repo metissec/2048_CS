@@ -6,7 +6,7 @@
     <ProjectGuid>{B7518369-472D-442C-BCCE-3E25FDB45985}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_2048Test</RootNamespace>
+    <RootNamespace>Game2048Test</RootNamespace>
     <AssemblyName>2048Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2048\2048.csproj">
+      <Project>{f5994a38-db50-45f9-92cf-76d0ef5f5023}</Project>
+      <Name>2048</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -76,25 +76,19 @@ namespace Game2048
             {
                 case "RightArrow":
                     for (int i = 0; i < 4; i++) { moveTile(-1, 0, i, FEILD_MIN, FEILD_MAX); }
-                    Spawn();
-                    Draw();
                     break;
                 case "UpArrow":
                     for (int i = 0; i < 4; i++) { moveTile(1, 1, i, FEILD_MAX, FEILD_MIN); }
-                    Spawn();
-                    Draw();
                     break;
                 case "LeftArrow":
                     for (int i = 0; i < 4; i++) { moveTile(1, 0, i, FEILD_MAX, FEILD_MIN); }
-                    Spawn();
-                    Draw();
                     break;
                 case "DownArrow":
                     for (int i = 0; i < 4; i++) { moveTile(-1, 1, i, FEILD_MIN, FEILD_MAX); }
-                    Spawn();
-                    Draw();
                     break;
             }
+            Spawn();
+            Draw();
         }
 
         private void moveTile(int dir, int xy, int index, int end, int start)
@@ -203,7 +197,7 @@ namespace Game2048
             DarkBlue = 256,
             DarkRed = 512,
             DarkMagenta = 1024,
-            White = 2047
+            White = 2048
         }
         private void Color(int i, int j)
         {

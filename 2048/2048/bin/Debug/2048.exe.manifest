@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="2048.exe" size="8632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="2048.exe" size="8120">
       <assemblyIdentity name="2048" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7fLZUA3hFvt83kIfHsOxpGt+HKLfxbl4w1kkN67i73I=</dsig:DigestValue>
+        <dsig:DigestValue>i0RsXSNkWGv0yaQKGztnAlwcZWvZsmM4y1kK7Wtsrrw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

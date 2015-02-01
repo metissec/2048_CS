@@ -1,7 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Game2048;
 
-namespace _2048Test
+
+namespace Game2048Test
 {
     [TestClass]
     public class UnitTest1

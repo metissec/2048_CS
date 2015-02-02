@@ -32,7 +32,7 @@ namespace Game2048
         private Random random;
         public int score;
         //Constants
-        public const int FEILD_MAX = 3;
+        public const int FEILD_MAX = 7;
         public const int FEILD_MIN = 0;
 
         public Board()
@@ -49,9 +49,9 @@ namespace Game2048
         private void Spawn()
         {
             var zeroLoc = new List<int[]>();
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < (FEILD_MAX + 1); i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < (FEILD_MAX + 1); j++)
                 {
                     if (gameBoard[i, j] == 0)
                     {
@@ -75,16 +75,16 @@ namespace Game2048
             switch (dir)
             {
                 case "RightArrow":
-                    for (int i = 0; i < 4; i++) { moveTile(-1, 0, i, FEILD_MIN, FEILD_MAX); }
+                    for (int i = 0; i < (FEILD_MAX + 1); i++) { moveTile(-1, 0, i, FEILD_MIN, FEILD_MAX); }
                     break;
                 case "UpArrow":
-                    for (int i = 0; i < 4; i++) { moveTile(1, 1, i, FEILD_MAX, FEILD_MIN); }
+                    for (int i = 0; i < (FEILD_MAX + 1); i++) { moveTile(1, 1, i, FEILD_MAX, FEILD_MIN); }
                     break;
                 case "LeftArrow":
-                    for (int i = 0; i < 4; i++) { moveTile(1, 0, i, FEILD_MAX, FEILD_MIN); }
+                    for (int i = 0; i < (FEILD_MAX + 1); i++) { moveTile(1, 0, i, FEILD_MAX, FEILD_MIN); }
                     break;
                 case "DownArrow":
-                    for (int i = 0; i < 4; i++) { moveTile(-1, 1, i, FEILD_MIN, FEILD_MAX); }
+                    for (int i = 0; i < (FEILD_MAX + 1); i++) { moveTile(-1, 1, i, FEILD_MIN, FEILD_MAX); }
                     break;
             }
             Spawn();
@@ -99,7 +99,7 @@ namespace Game2048
                     int x = start;
                     while (x != end)
                     {
-                        RemoveZero(dir, xy, index, end, start, 3);
+                        RemoveZero(dir, xy, index, end, start, FEILD_MAX);
                         if (gameBoard[index, x] == gameBoard[index, x + dir])
                         {
                             gameBoard[index, x] *= 2;
@@ -115,7 +115,7 @@ namespace Game2048
                     int y = start;
                     while (y != end)
                     {
-                        RemoveZero(dir, xy, index, end, start, 2);
+                        RemoveZero(dir, xy, index, end, start, FEILD_MAX);
                         if (gameBoard[y, index] == gameBoard[y + dir, index])
                         {
                             gameBoard[y, index] *= 2;
@@ -172,9 +172,9 @@ namespace Game2048
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Score: " + score + "\n");
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < (FEILD_MAX + 1); i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < (FEILD_MAX + 1); j++)
                 {
                     Color(i, j);
                     Console.Write(string.Format("{0,4} ", gameBoard[i, j]));

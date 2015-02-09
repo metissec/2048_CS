@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="2048.exe.manifest" size="3433">
+    <dependentAssembly dependencyType="install" codebase="2048.exe.manifest" size="3041">
       <assemblyIdentity name="2048.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CCKcJQCL4YAcC9e1zEKMtThGOqcSDQrQct8tfZBrpKM=</dsig:DigestValue>
+        <dsig:DigestValue>/rXej1Z3KeColaetYxdHpaMV1tw4GE4Dxkd5xv/Eov8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

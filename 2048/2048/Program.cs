@@ -32,7 +32,7 @@ namespace Game2048
         private Random random;
         public int score;
         //Constants
-        public const int FEILD_MAX = 7;
+        public const int FEILD_MAX = 3;
         public const int FEILD_MIN = 0;
 
         public Board()
